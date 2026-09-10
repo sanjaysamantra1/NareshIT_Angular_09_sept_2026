@@ -1,0 +1,44 @@
+FrontEnd
+========
+HTML - Content of a webpage ( heading, div, list, table , button, form )
+CSS - Controls appearance ( color , spacing, fonts, layout )
+Bootstrap - Ready made CSS , create responsive designs faster
+Javascript - adds behavior and interactivity, dynamic content
+
+Angular - Its a Frontend framework to build well organized, enterprise level web applications 
+
+
+Emmet / shortcuts
+==================
+https://docs.emmet.io/cheat-sheet/
+
+!   HTML-5 Code 
+
+
+
+Product List page
+==================
+1. Create an HTML File (product_list.html)
+ 
+2. !   ( Emmet / shortcut) add boilerplate HTML code
+   
+3. Add HTML, CSS, Javascript code in product_list.html file
+
+4. To Open/Run HTML file in browser 
+   a. install vscode extension ( open in browser / live server)
+   b. alt+b   (OR)  alt+shift+b
+
+
+
+    React						Angular
+===========================================================
+1. Library-2013					 1. Framework-2009
+2. Light-weight					 2. Heavy
+3. JSX + Javascript				 3. HTML + Typescript
+4. Uni-Directional				 4. two-way
+5. Virtual DOM					 5. Regular DOM
+6. Axios 				 		 6. HttpClientModule 
+7. No 		 				    7. Dependency Injection
+8. No						    8. Form Validation
+9. extra libraries needed		 9. No additional libraries
+10. UI heavy					 10. Functionality heavy
