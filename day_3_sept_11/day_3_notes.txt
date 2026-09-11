@@ -1,0 +1,92 @@
+Types Of Javascript
+===================
+1. internal Javascript 
+   <script></script>      Page/File Level 
+
+2. external Javascript  ( Application/Project Level )
+   a. create a separate .js file and write Javascript code ( addition.js )
+   b. include that javascript file in to HTML file using <script src=file></script>
+
+
+
+JavaScript : Is a Programming Language , Follows ECMAScript Standards
+ECMAScript : a set of standards , followed by javascript 
+ECMA : European Computer Menufecturer Association
+
+
+<june 2015  : ECMAScript-5
+june 2015   : ECMAScript-6  ( let, const , arrow , class , extends, module , set , map )
+2016 : ECMAScript-7
+2017 : ECMAScript-8
+2018 : ECMAScript-9
+....................
+....................
+2025 : ECMAScript-16
+2026 : ECMAScript-17
+
+
+
+
+What is the right Place to include Javascript code? 
+====================================================
+a. <head></head>
+b  <body></body>
+c. anywhere 
+
+
+Answer:
+------
+1. As long as the javascript code is not accessing/manipulating DOM elements,
+   we can place that javascript either in head or body.
+
+2. If the javascript code is  accessing/manipulating DOM elements,
+   we should place that javascript in body. by the time javascript is executed HTML elements 
+   should be available in the DOM.
+
+Note: Its Recommended to have javascript files in body section
+
+All these things were applicable when we didn't have async/defer 
+--------------------------------------------------------------
+
+in HTML - 5 we got 2 new attribute 
+    1. async : 
+    2. defer : execute the javascript only after HTML elements are available in DOM
+<script src="./Addition.js" async></script>
+<script src="./Change_Color.js" defer></script>
+
+-Javascript downloading happens along with HTML Parsing.
+
+Final Conclusion: have javascript code in head section, use async & defer
+
+
+
+Running Javascript code in Browser vs NodeJS
+============================================
+1. Browser:
+    a. create a  .js file and write Javascript code ( addition.js )
+    b. include that javascript file in to HTML file using <script src=file></script>
+    c. when HTML file is Run , javascript code gets executed in browser
+
+2. Nodejs:
+   a. create a  .js file and write Javascript code ( addition.js )
+   b. run that JavaScript file using below command
+      node <filename>.js
+
+
+            Browser                             NodeJS
+===================================================================            
+1. FrontEnd Development                 1. BackEnd Development 
+2. Window - Yes                         2. Window - No
+3. document - Yes                       3. document - No
+4. SessionStorage - Yes                 4. SessionStorage - Node
+5. FileSystem - No                      5. FileSystem - Yes
+6. OS - No                              6. OS - Yes
+
+
+Note: 
+=====
+-There are few common modules/objects which supports both browser & Nodejs: console, Math, Array, Object
+
+-Browser Specific Modules/objects : window , document, SessionStorage , LocalStorage
+
+-NodeJS Specific modules/objects : fs , os , http
