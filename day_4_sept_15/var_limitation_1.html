@@ -1,0 +1,24 @@
+<script>
+    function var_test() {
+        if (true) {
+            var courseName = 'Angular';
+            console.log(`inside block: ${courseName}`); // accessible - yes
+        }
+        console.log(`outside block: ${courseName}`); // accessible - yes
+    }
+    var_test()
+    /* 
+        variable 'courseName' is declared inside if block
+        ideally it should be only visible inside the block and not outside the block
+        but here 'courseName' is accessible outside the block also
+        this clearly says 'var' doesn't support block scope
+    */
+    function let_test() {
+        if (true) {
+            let clgName = 'NareshIT'; // block scoped
+            console.log(`inside block: ${clgName}`); // accessible - yes
+        }
+        console.log(`outside block: ${clgName}`); // accessible - No
+    }
+    let_test()
+</script>

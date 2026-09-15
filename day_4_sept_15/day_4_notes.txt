@@ -1,0 +1,24 @@
+Variables
+==========
+-variables are declared by using either of the below 3 keywords
+    1. var 
+    2. let 
+    3. const
+
+
+    var						let						 const
+======================================================================
+1.since begining		 1.ECMASCRIPT-6(2015)		1.ECMASCRIPT-6(2015)
+2.value can be changed   2.value can be changed     2.cann't be changed
+3.initialization is		 3.initialization is		3.mandatory
+	not mandatory           not mandatory	
+4.can be redeclared		 4.cann't be redeclared		4.cann't be redeclared
+5.function/global		 5.block/function/global	5.block/function/global
+6.TDZ - No			 	 6.TDZ - Yes				6.TDZ - Yes
+
+
+Variable Scope
+===============
+1. Global Scope : variables declared outside a function , can be used by multiple functions
+1. Function Scope : variables declared inside a function ,can be used by only that function
+1. Block Scope : variables declared inside a block ,can be used by only that block

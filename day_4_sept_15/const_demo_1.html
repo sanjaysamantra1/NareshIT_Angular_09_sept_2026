@@ -1,0 +1,11 @@
+<script>
+    const arr = [10, 20];
+    arr.push(30);
+    console.log(arr);
+    arr = []; // Uncaught TypeError: Assignment to constant variable.
+
+    const user = { name: 'sanjay', role: 'Trainer' };
+    user.address = 'Hyderabad';
+    console.log(user);
+    user = {}; // Uncaught TypeError: Assignment to constant variable.
+</script>

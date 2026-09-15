@@ -1,0 +1,14 @@
+<script>
+    // 'var' variables dont support block scope
+    for (var i = 1; i <= 3; i++) {
+        console.log(`inside for loop i:${i}`); // i is accessible-yes
+    }
+    console.log(`outside for loop i:${i}`); // i is accessible-yes
+
+
+    // 'let/const' variables do support block scope
+    for (let j = 1; j <= 3; j++) { // j is block scope
+        console.log(`inside for loop j:${j}`); // i is accessible-yes
+    }
+    console.log(`outside for loop j:${j}`); // i is accessible-NO
+</script>

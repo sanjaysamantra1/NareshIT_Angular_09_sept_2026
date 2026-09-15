@@ -1,0 +1,27 @@
+<script>
+    var a = 10;   // Global Scope
+    let b = 20;
+    const c = 30;
+    console.log(`Global a: ${a}`);
+    console.log(`Global b: ${b}`);
+    console.log(`Global c: ${c}`);
+
+    function f1() {
+        // var a = 100;   // Function Scope
+        // let b = 200;
+        // const c = 300;
+        console.log(`Function a: ${a}`);
+        console.log(`Function b: ${b}`);
+        console.log(`Function c: ${c}`);
+
+        if (true) {
+            // var a = 1000;   // Block Scope
+            // let b = 2000;
+            // const c = 3000;
+            console.log(`Block a: ${a}`);
+            console.log(`Block b: ${b}`);
+            console.log(`Block c: ${c}`);
+        }
+    }
+    f1();
+</script>
