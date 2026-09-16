@@ -1,0 +1,9 @@
+<script>
+    let a = 100;
+
+    function test() { 
+        console.log(a); // ReferenceError: Cannot access 'a' before initialization
+        let a = 200;
+    }
+    test();
+</script>

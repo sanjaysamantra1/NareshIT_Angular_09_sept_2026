@@ -1,0 +1,24 @@
+<script>
+    console.log('Global Code starts here...')
+    var a = 10;
+    let b = 20;
+    const c = 30;
+    console.log(`a: ${a}`);
+    console.log(`b: ${b}`);
+    console.log(`c: ${c}`);
+
+    function f1() {
+        console.log('f1 starts...')
+        var aa = 100;
+        let bb = 200;
+        const cc = 300;
+        console.log(`a: ${a}`);
+        console.log(`b: ${b}`);
+        console.log(`c: ${c}`);
+        console.log('f1 ends...')
+    }
+    f1()
+    console.log('Global Code Ends here...')
+
+    // 1. Global Execution Context       2. f1 Execution context
+</script>

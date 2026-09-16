@@ -1,0 +1,46 @@
+How Javascript Works
+====================
+-When a javascript program runs , 1 Global Execution Context(anonymous) is created and added to stack for Execution
+
+-For every function call, a new function execution context is created and added to stack for Execution
+
+-Each Execution Context has 2 phases:
+    1. Memory Creation Phase 
+            a. Memory is allocated for all variables(var,let,const) and functions
+            b. only for 'var' variables 'undefined' value is assigned
+            c. for let&const variables no value gets assigned
+
+    2. Code Execution Phase 
+            a. code gets executed line by line
+            b. variables receive their values and functions are invoked
+
+
+
+N:p - All variables (var,let,const) are hoisted but only 'var' variables are usable/reachable before initialization.
+-let/const variables are not reachable/usable before initialization (Temporal Dead Zone)
+
+	
+Hoisting:
+=========
+-hoisting is a mechanism where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed.
+-Variables declared with var are hoisted, but their values are not initialized. They are given an initial value of undefined.
+-Variables declared with let and const are also hoisted but are not initialized. Accessing them before declaration results in a ReferenceError because they are in the "temporal dead zone."
+-Function declarations are hoisted, meaning you can call them before they appear in the code.
+
+Type			   Hoisted?			   Initialized?			  Usable before declaration?
+=========================================================================================
+var					✅ Yes				✅ Undefined			    ⚠️ Allowed but undefined
+let					✅ Yes				❌ No					❌ ReferenceError
+const				✅ Yes				❌ No					❌ ReferenceError
+Func Declaration	✅ Yes				✅ Yes					✅ Allowed
+Func Expression 	✅ Yes				❌ Undefined			    ❌ TypeError
+
+
+
+Temporal Dead Zone
+==================
+-The period between entering scope and being initialized where they cannot be accessed. 
+ This period is the temporal dead zone (TDZ).
+-The state where variables are un-reachable. They are in memory, but they aren't usable.
+-The let and const variables exist in the TDZ from the start of their enclosing scope until they are initialized.
+-if a let/const variable is accessed before its initialization, it would throw a ReferenceError. Because of the TDZ.

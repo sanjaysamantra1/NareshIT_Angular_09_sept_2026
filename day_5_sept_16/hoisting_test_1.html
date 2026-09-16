@@ -1,0 +1,12 @@
+<script>
+    console.log(`a: ${a}`);  // undefined 
+    var a = 10;
+    console.log(`a: ${a}`);  // 10
+
+    function f1() {
+        console.log(`a: ${a}`);  // undefined
+        var a = 100;
+        console.log(`a: ${a}`);  // 100
+    }
+    f1();
+</script>

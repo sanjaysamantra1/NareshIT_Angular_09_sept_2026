@@ -1,0 +1,23 @@
+<script>
+    console.log(`a: ${a}`); // undefined
+    // console.log(`b: ${b}`); // Cannot access 'b' before initialization
+    // console.log(`c: ${c}`); // Cannot access 'c' before initialization
+    var a = 10;
+    let b = 20;
+    const c = 30;
+    console.log(`a: ${a}`);
+    console.log(`b: ${b}`);
+    console.log(`c: ${c}`);
+    /*
+        can we access variable 'a' at line-2 , which is initialized at line-5 ?  Yes  (Hoisting)
+        by the time phase-2/execution starts , var a is already present in memory with 'undefined' value
+
+        can we access variable 'b' at line-3 , which is initialized at line-6 ?  No  (Temporal Dead Zone)
+        when line-3 gets executed, even though variable 'b' is present in memory, it has no value assigned
+        if a variable has no value assigned, it cannot be used (TDZ)
+
+        when we can access 'b' variable? 
+        'b' variable can be used only after the line(line-6) where it is actually initialized
+        once execution crosses line-6 'b' can be used
+    */
+</script>

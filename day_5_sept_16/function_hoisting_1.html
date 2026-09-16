@@ -1,0 +1,14 @@
+<script>
+    // 1. function declaration - hoisted
+    f1();  // hoisting
+    function f1() {
+        console.log('This is f1...');
+    }
+    f1();
+
+    f2(); // f2 is not a function
+    var f2 = function () { // Function Expression
+        console.log('This is f2...');
+    }
+    f2();
+</script>
