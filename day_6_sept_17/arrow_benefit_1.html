@@ -1,0 +1,30 @@
+<script>
+    class Student {
+        firstName = 'Virat';
+        lastName = 'Kohli';
+
+        fullName1() {  // Regular - this : how/where the function is invoked
+            console.log('FullName-1: ', this);  // this = Student Obj
+            console.log('fullName-1: ', this.firstName, this.lastName)
+        }
+        fullName2 = () => { // Arrow - this : Lexical Scope / where the function is written
+            console.log('FullName-2: ', this);  // this = Student Obj
+            console.log('fullName-2: ', this.firstName, this.lastName)
+        }
+    }
+    let std = new Student();
+    std.fullName1();  // std.fullName1() , inside fullname1 , this = std
+    std.fullName2();
+
+    // an arrow function can be stored in a variable , and can be invoked using that variable
+    let a = std.fullName2;
+    a();
+    let b = a;
+    b();
+    let c = b;
+    c();
+
+    // when a regular function is stored in a variable and invoked, this=will not point to the class/object
+    let x = std.fullName1;
+    x();
+</script>

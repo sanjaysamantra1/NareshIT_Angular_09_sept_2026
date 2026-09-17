@@ -1,0 +1,70 @@
+functions
+==========
+1. Pre-Defined : Functions are already there, we just have to use them
+                 console.log(), window.alert()
+2. user-defined : we have to write functions, we have to use them
+
+
+
+1. Function Declaration
+2. Function Expression
+3. Arrow Function
+
+
+Function Declaration  vs Function Expression
+============================================
+1. Function Declarations are named , Function Expressions are anonymous
+2. Function Declarations are hoisted , Function Expressions are not hoisted
+
+
+
+Arrow Function
+==============
+-ECMAScript_6 - 2015
+-Anonymous
+-are not hoisted
+-function keyword is not used
+-function body {} is optional when the function has only 1 line of code
+-return is optional
+
+
+HigherOrder Function : A function that takes another function as argument 
+                       here map() is higherOrder function
+
+CallBack Function : A function that is passed as argument to another function 
+                    Here incrementBy5 is the callback function                      
+
+
+  function incrementBy5(ele) {
+        return ele + 5;
+    }
+    let result = arr.map(incrementBy5);
+
+
+this keyword
+============
+-'this' is a keyword
+-'this' refers to the current object that is executing the current code
+
+
+Arrow Function Limitations
+==========================
+1. arrow functions shouldn't be used as object methods
+   when arrow functions are used inside object, this=window 
+2.  Arrow functions shouldn't be  used as event listeners
+
+
+Arrow Function Benefits
+=======================
+-uses 'this' value from its lexical/outer scope 
+-lexical scope: immediate outer scope / the place where the function is written
+        
+
+
+
+how 'this' works in regular function vs arrow function
+==========================================================
+Regular Function :  this - how/where the function is invoked , this = dynamic(btn1/btn2/btn3)
+Arrow Function : this - where the function is written 
+                'this' value is used from Lexical/outer Scope
+    
