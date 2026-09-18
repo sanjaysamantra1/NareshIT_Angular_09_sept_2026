@@ -4,3 +4,10 @@ Closure
 
 -when outer function execution completes, we would expect all its variables to be no longer available. however if the inner function uses outer function variables, they are retained.
 
+-When an inner function accesses any data from outer function, a 'closure' scope gets attached to the inner function
+
+
+closure
+========
+-counter
+-encapsulation
