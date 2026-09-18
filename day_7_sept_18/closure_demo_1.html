@@ -1,0 +1,16 @@
+<script>
+    var a = 10;
+    let b = 20;    // a,b,c are global scoped variables
+    const c = 30;  //  'a' is part of global , 'b'/'c' are part of Script 
+
+    function f1() {
+        let d = 40;
+        function f2() {
+            console.log(a, b, c, d);
+        }
+        f2();
+        console.dir(f2)
+    }
+    f1();
+    console.dir(f1)
+</script>

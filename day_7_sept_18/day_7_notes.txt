@@ -1,0 +1,6 @@
+Closure
+========
+-A Closure is a concept where an inner function remembers the variables from its outer scope even after the outer function is executed.
+
+-when outer function execution completes, we would expect all its variables to be no longer available. however if the inner function uses outer function variables, they are retained.
+

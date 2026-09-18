@@ -1,0 +1,23 @@
+<script>
+    const team = {
+        teamName: 'RCB',
+        members: ['Virat ', 'Dinesh ', 'Rajat '],
+
+        listMembers: function () {
+            console.log('listMembers: ', this);  // this = team object
+
+            this.members.forEach(function (member) {
+                console.log(this); // this = window
+                console.log(`Hiii, ${member} is from ${this.teamName}`)
+            })
+
+            // this = lexical scope, outer scope, this = team
+            this.members.forEach((member) => {
+                console.log(this); // this = team Object
+                console.log(`Helloo, ${member} is from ${this.teamName}`)
+            })
+        }
+
+    }
+    team.listMembers();
+</script>
