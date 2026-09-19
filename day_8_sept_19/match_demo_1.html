@@ -1,0 +1,12 @@
+<script>
+    let str = 'Rain in spain mAinly stays in the plain';
+
+    let res1 = str.match(/ain/);  // REGEX 
+    console.log(res1);  // 'ain' from  index: 1
+
+    let res2 = str.match(/ain/g);   // g = global
+    console.log(res2);
+
+    let res3 = str.match(/ain/gi);   // g = global  , i = ignore case
+    console.log(res3);  
+</script>
