@@ -1,0 +1,40 @@
+To Open/Run HTML file in browser 
+=================================
+1. install vscode extension ( open in browser / live server)
+
+2. create an HTML File and add HTML+Javascript code
+
+3. alt+b   /   alt+shift+b
+
+
+
+
+String methods:
+--------------
+length;
+toUpperCase();
+toLowerCase();
+charAt();
+at()
+charCodeAt();
+concat();
+indexOf();
+lastIndexOf();
+includes();
+startsWith()
+endsWith()
+match();
+matchAll()   // returns iterator
+replace();
+replaceAll();
+repeat();
+slice(start, end)
+substring(start, end)
+substr(start, length)
+split()
+search(regex)
+trim()
+eval(); (eval() is from Window Object)
+localeCompare()
+
+N.p:- substring() cannot accept negative indexes. slice() does.

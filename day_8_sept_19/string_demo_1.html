@@ -1,0 +1,23 @@
+<script>
+    let str = 'Javascript';
+
+    console.log(str.length); // 10
+    console.log(str.toUpperCase()); // JAVASCRIPT
+    console.log(str.toLowerCase()); // javascript
+
+    console.log(str[1]); // a
+    console.log(str.charAt(1)); // a
+    console.log(str.at(1)); // a
+
+    // at() works with both +ve & -ve index
+    console.log(str[-1]); // undefined
+    console.log(str.charAt(-1)); // 
+    console.log(str.at(-1)); // t
+
+    console.log(str.charCodeAt(1));  // a = 97
+
+    console.log(str.concat(' Training')); // Javascript Training
+
+    console.log(str.indexOf('a')); // 1
+    console.log(str.lastIndexOf('a'));  // 3
+</script>
