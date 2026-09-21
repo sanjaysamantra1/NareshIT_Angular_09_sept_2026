@@ -1,0 +1,18 @@
+<script>
+    //  Print the character which is repeated max no of times
+    let str = 'Hello world adf fh ert fhg';
+    let obj = {};
+    let max_occured_char = '';
+    let max_occured_time = 0;
+
+    for (char of str) {
+        obj[char] = obj[char] ? obj[char] + 1 : 1;
+
+        if (obj[char] > max_occured_time) {
+            max_occured_char = char;
+            max_occured_time = obj[char];
+        }
+    }
+
+    console.log(`${max_occured_char} is repeated for ${max_occured_time} times`)
+</script>
