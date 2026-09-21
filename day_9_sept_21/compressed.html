@@ -1,0 +1,15 @@
+<script>
+    // Ask user to enter a  string , display the Compressed String 
+    let str = 'aaabbc';
+    let output = '';  // a3b2c1
+
+    for (let i = 0; i < str.length; i++) {
+        let count = 1;
+        while (str[i] == str[i + 1]) {
+            count = count + 1;
+            i++;
+        }
+        output = output + str[i] + count;
+    }
+    console.log(output);
+</script>

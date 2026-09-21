@@ -1,0 +1,12 @@
+<script>
+    let str = 'a3b2c1';
+    let result = '';
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];  // a
+        let count = Number(str[i + 1]); // 3 
+
+        result = result + char.repeat(count)
+    }
+    console.log(result)
+</script>
