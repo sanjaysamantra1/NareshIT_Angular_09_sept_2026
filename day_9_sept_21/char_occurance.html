@@ -1,0 +1,13 @@
+<script>
+    let str = 'entertainment';
+    let obj = {};
+
+    for (char of str) {
+        if (obj[char]) { // check if char is present in Object or not
+            obj[char] = obj[char] + 1;
+        } else {
+            obj[char] = 1;
+        }
+    }
+    console.log(obj)
+</script>
