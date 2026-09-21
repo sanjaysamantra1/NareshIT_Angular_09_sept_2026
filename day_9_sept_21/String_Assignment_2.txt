@@ -1,0 +1,40 @@
+1. Print the occurence of each character in a string
+   input: 'entertainment'
+   output: { e:3 , n:2 , t: 3 ....}
+
+2. Print the character which is repeated max no of times
+   input: 'hello world'
+   output : 'L'
+   
+3. Ask user to enter a  string , display the Compressed String 
+    input: aaabbc
+    output : a3b2c1
+
+4. WAP to Expand Compressed String
+    Input: a3b2c4
+    Output: aaabbcccc
+
+5. WAP to check if 2 strings are anagram or not
+	'listen' - 'silent'    anagram(every char of str1 should be there in str2)
+
+6. Print the Abbreviation for a string
+   input: 'Rabindra Nath Tagore'
+   output: 'R. N. tagore'
+
+7. Ask user to enter a sequence of parantheses and validate 
+   input: '([{ }])'
+   output : true
+
+8. Ask user to enter a 3 letter word, print all the permutations using those 3 letters.
+    input: 'ABC'
+    output: ABC , ACB , BCA, BAC ...
+
+9. Ask user to enter a number and convert that to Roman value
+   input:   9    12
+   output : IX   XII
+
+10. Ask user to enter a roman string and convert that to integer value
+   input:   IX    XII
+   output : 9     12
+
+
