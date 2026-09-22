@@ -1,0 +1,14 @@
+<script>
+    let cars = ['Tata', 'Honda', 'Maruti', 'Hyundai', 'Honda', 'Hyundai'];
+
+    console.log(cars.at(1)); // Honda
+    console.log(cars.at(-1)); // Hyundai
+    console.log(cars.at(10)); // undefined
+
+    console.log(cars.indexOf('BMW'));         // -1   BMW is not present
+    console.log(cars.indexOf('Honda'));       // 1
+    console.log(cars.lastIndexOf('Honda'));   // 4
+
+    console.log(cars.includes('Maruti')); // true
+    console.log(cars.includes('BMW')); // false
+</script>

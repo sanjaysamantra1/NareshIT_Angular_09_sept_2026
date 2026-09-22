@@ -1,0 +1,11 @@
+<script>
+    let cars = ['Tata', 'Honda', 'Maruti', 'Hyundai'];
+
+    console.log(cars);  // ['Tata', 'Honda', 'Maruti', 'Hyundai']
+    delete cars[1];
+    console.log(cars);  // ['Tata', undefined , 'Maruti', 'Hyundai']
+
+    for (car of cars) {
+        console.log(car)
+    }
+</script>

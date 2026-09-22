@@ -1,0 +1,19 @@
+<script>
+    let cars = ['Tata', 'Honda', 'Maruti'];
+
+    // splice(Index , delete count , items to add)
+    cars.splice(1, 0, 'Hyundai', 'Toyota');
+    console.log(cars); // ['Tata', 'Hyundai', 'Toyota', 'Honda', 'Maruti']
+
+    // only delete
+    cars.splice(1, 2);
+    console.log(cars);  // ['Tata', 'Honda', 'Maruti'];
+
+    cars.splice(0, cars.length)
+    console.log(cars);
+
+    let arr1 = [10, 20, 30, 40, 50];
+    let arr2 = arr1.toSpliced(1, 2, 25, 35);
+    console.log(arr1);  // [10, 20, 30, 40, 50];
+    console.log(arr2);  // [10, 25, 35, 40, 50];
+</script>
