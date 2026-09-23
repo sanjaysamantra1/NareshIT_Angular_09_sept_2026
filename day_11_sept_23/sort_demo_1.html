@@ -1,0 +1,20 @@
+<script>
+    let arr1 = [20, 50, 10, 40, 30];
+    arr1.sort();
+    console.log('arr1: ', arr1);
+
+    let arr2 = [101, 102, 105, 10, 15, 91, 7, 9, 6, 4];
+    arr2.sort();
+    console.log('arr2: ', arr2);
+    // [10, 101, 102, 105, 15, 4, 6, 7, 9, 91]
+
+
+    // How to perform Numeric Sort
+    let arr3 = [101, 102, 105, 10, 15, 91, 7, 9, 6, 4];
+    arr3.sort((a, b) => {
+        console.log(`a:${a}  b:${b}`);
+        return a - b;
+    });   // ascending
+    // arr3.sort((a,b)=>b-a);   // descending
+    console.log('arr3: ', arr3);
+</script>

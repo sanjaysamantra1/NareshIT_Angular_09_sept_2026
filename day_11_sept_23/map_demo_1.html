@@ -1,0 +1,28 @@
+<script>
+    let arr = [10, 20, 30, 40, 50];
+    // increase each value by 5
+    let incrementedArr = arr.map((ele) => ele + 5);
+
+    console.log(arr);
+    console.log(incrementedArr);
+
+    let employees = [
+        { id: 1, name: 'Amit Sharma', role: 'Manager', salary: 85000, status: 'Active', gender: 'male' },
+        { id: 2, name: 'Priya Verma', role: 'Developer', salary: 65000, status: 'Active', gender: 'female' },
+        { id: 3, name: 'Rahul Mehta', role: 'Tester', salary: 38000, status: 'Inactive', gender: 'male' },
+        { id: 4, name: 'Sneha Iyer', role: 'Developer', salary: 42000, status: 'Inactive', gender: 'female' },
+        { id: 5, name: 'Karan Singh', role: 'Manager', salary: 52000, status: 'Active', gender: 'male' },
+        { id: 6, name: 'Neha Gupta', role: 'Tester', salary: 72000, status: 'Active', gender: 'female' }
+    ];
+    // Add 'Mr.' / 'Miss.' before every name
+    // map() manipulates/updates each item in the array
+
+    let updatedEmployees = employees.map((emp) => {
+        return { // creating a new object
+            ...emp, // copy other fields(id,role,salary) as it is
+            name: emp.gender == 'male' ? `Mr. ${emp.name}` : `Miss. ${emp.name}`
+        }
+    })
+    console.log(employees)
+    console.log(updatedEmployees)
+</script>
