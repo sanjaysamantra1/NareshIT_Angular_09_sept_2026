@@ -8,4 +8,8 @@
         { id: 6, name: 'Neha Gupta', role: 'Tester', salary: 72000, status: 'Active', gender: 'female' }
     ];
     // increase salary of every employee by 500
+    let updatedEmployees = employees.map(emp => {
+        return { ...emp, salary: emp.salary + 500 }
+    })
+    console.log(updatedEmployees)
 </script>

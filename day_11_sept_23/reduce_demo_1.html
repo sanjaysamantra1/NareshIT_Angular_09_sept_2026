@@ -1,0 +1,18 @@
+<script>
+    let arr = [10, 20, 30, 40, 50];
+    // find the sum of all the numbers
+    let sum = arr.reduce((prev, curr) => {
+        console.log(`Prev: ${prev} Curr:${curr}`);
+        return prev + curr;
+    }, 0)
+    console.log(`Sum: ${sum}`);
+
+
+    // Reverse a string using reduce()
+    let str = 'HELLO';
+    let rev_str = str.split('').reduce((result, char) => {
+        console.log(result, char)
+        return char + result;
+    }, '')
+    console.log(`Reverse of ${str} is ${rev_str}`)
+</script>

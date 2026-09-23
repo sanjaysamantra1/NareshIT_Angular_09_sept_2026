@@ -1,0 +1,27 @@
+<script>
+    let employees = [
+        { id: 1, name: 'Amit Sharma', role: 'Manager', salary: 85000, status: 'Active', gender: 'male' },
+        { id: 2, name: 'Priya Verma', role: 'Developer', salary: 65000, status: 'Active', gender: 'female' },
+        { id: 3, name: 'Rahul Mehta', role: 'Tester', salary: 38000, status: 'Inactive', gender: 'male' },
+        { id: 4, name: 'Sneha Iyer', role: 'Developer', salary: 42000, status: 'Active', gender: 'female' },
+        { id: 5, name: 'Karan Singh', role: 'Manager', salary: 52000, status: 'Active', gender: 'male' },
+        { id: 6, name: 'Neha Gupta', role: 'Tester', salary: 72000, status: 'Active', gender: 'female' }
+    ];
+
+    // check if every employee salary is more than 30000
+    let res1 = employees.every(emp => emp.salary > 30000);
+    console.log('every employee salary is more than 30000 ? ', res1); // True
+
+    // check if atleast 1 employee is In-Active
+    let res2 = employees.some(emp => emp.status == 'Inactive');
+    console.log('atleast 1 employee is In-Active? ', res2);
+
+    // check if every employee is 'male'
+    let res3 = employees.every(emp => emp.gender == 'male');
+    console.log('every employee is male? ', res3);
+
+    // check if atleast 1 employee is Developer
+    let res4 = employees.some(emp => emp.role == 'Developer');
+    console.log('atleast 1 employee is Developer? ', res4);
+
+</script>
