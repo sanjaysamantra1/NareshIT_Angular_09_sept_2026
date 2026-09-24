@@ -1,0 +1,9 @@
+<script>
+    const arr1 = [10, 20];
+    arr1.push(30);
+    console.log(arr1);
+
+    Object.freeze(arr1); // object is not extensible
+    arr1.push(40, 50)
+    console.log(arr1);
+</script>

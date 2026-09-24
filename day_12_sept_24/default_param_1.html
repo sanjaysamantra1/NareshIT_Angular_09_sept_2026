@@ -1,0 +1,12 @@
+<script>
+    function sum(a, b, c) {
+        console.log(a + b + c)
+    }
+    sum(10, 20); // NaN
+
+    function add(a, b, c = 0) {
+        console.log(a + b + c)
+    }
+    add(10, 20); // 30
+    add(10, 20, 30); // 60
+</script>

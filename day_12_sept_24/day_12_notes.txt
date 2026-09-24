@@ -1,0 +1,64 @@
+Array Copy
+==========
+let arr1 = [10, 20];
+let arr2 = arr1;  // address/reference copy ( Not value copy)
+-A new array is not being created, rather same address is being assigned to arr2
+-Both arr1 & arr2 are holding the same address
+
+let arr1 = [10, 20, [30, 31]];
+let arr2 = [...arr1]; // value copy - shallow copy
+
+let arr3 = [10, 20, [30, 31]];
+let arr4 = structuredClone(arr3); // value copy - Deep Copy
+
+-A shallow copy of an array is a copy whose nested elements share the same references.
+ (Nested arrays will not be copied by value)
+-A deep copy of an array is a copy whose nested elements do not share the same references.
+
+
+Array Mutability
+================
+const arr1 = [10, 20];  // array is mutable
+arr1.push(30);
+console.log(arr1); 
+
+Object.freeze() makes an array/object immutable
+
+
+
+
+JavaScript : Programming Language, Follows ECMAScript Standards
+ECMAScript : Set of Standards
+ECMA : European Computer Manufacturer Association
+
+<june 2015  : ECMAScript-5
+june 2015   : ECMAScript-6  ( let, const , arrow , class , extends, module , set , map )
+2016 : ECMAScript-7
+2017 : ECMAScript-8
+2018 : ECMAScript-9
+....................
+....................
+2025 : ECMAScript-16
+2026 : ECMAScript-17
+
+
+ES_6 & Beyond
+=============
+1. let & const
+2. Template Literals
+3. for-in & for-of Loop
+4. Arrow Function
+5. Default Parameter Value
+6. REST parameter
+7. Spread Operator
+8. Destructuring (Array & Object)
+9. Enhanced Object Literals
+10. Classes
+11. Modules (import/export)
+12. Dynamic Import
+13. Optional Chaining (safer deep property access)
+14. Nullish Coalescing (use fallback only for undefined/null)
+15. Map & Set , WeakMap & WeakSet
+16. Promise , async-await
+17. Generators
+18. Proxy & Reflect

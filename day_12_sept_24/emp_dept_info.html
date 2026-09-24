@@ -1,0 +1,17 @@
+<script>
+    // add Dept info for each employee
+    employees = [
+        { id: 101, name: "sanjay", sal: 5000, gender: "male" },
+        { id: 104, name: "reena", sal: 8000, gender: "female" }
+    ]
+    departments = [
+        { id: 101, dept: "sales" },
+        { id: 104, dept: "marketing" }
+    ]
+
+    for (emp of employees) {
+        let deptInfo = departments.find(dept => dept.id == emp.id);
+        emp.dept = deptInfo.dept;
+    }
+    console.log(employees)
+</script>

@@ -1,0 +1,17 @@
+<script>
+    //  Ask user to enter a 3 letter word, print all the permutations using those 3 letters.
+    // input: 'ABC'
+    // output: ABC , ACB , BCA, BAC ...
+
+    function printPermutation(str, res = '') {
+        if (!str.length) {
+            console.log(res)
+        }
+        for (let i = 0; i < str.length; i++) {
+            let currentChar = str[i];
+            let remainingChars = str.substr(0, i) + str.substr(i + 1);
+            printPermutation(remainingChars, res + currentChar);
+        }
+    }
+    printPermutation('ABC');
+</script>
