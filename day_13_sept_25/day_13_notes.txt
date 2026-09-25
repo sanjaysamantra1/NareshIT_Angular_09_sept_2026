@@ -1,0 +1,49 @@
+ES_6 & Beyond
+=============
+8. Destructuring (Array & Object)
+9. Enhanced Object Literals
+10. Classes
+11. Modules (import/export)
+12. Dynamic Import
+13. Optional Chaining (safer deep property access)
+14. Nullish Coalescing (use fallback only for undefined/null)
+15. Map & Set , WeakMap & WeakSet
+16. Promise , async-await
+17. Generators
+18. Proxy & Reflect
+
+
+Class & Object
+==============
+class - structure/blueprint/template for creating Object 
+		class has only logical existance
+		class doesn't have physical existance
+		
+object - Real Entity
+		 every instance of a class
+		 Object has physical existance
+
+-a class in javascript is created using constructor function(ES-5).
+-a class in javascript is created using class keyword.(ES-6).
+-class contains variables(states/properties) and methods(behaviours) inside it.
+
+
+Modules
+=======
+-Modules allow us to split our code into separate files, each focusing on a specific feature.
+-Easier to maintain, Reusable 
+
+-2 Module Systems   
+	a. CommonJS Module System      (module.exports , require())
+	b. ECMASCRIPT Module System    (export , import)
+
+ESM imports & exports
+=====================
+-Default import:
+  import DefaultMember from 'src/my_lib';
+-Named imports:
+  import { name1, name2 } from 'src/my_lib';
+-Combining a default import with named imports
+  import DefaultMember, { name1, name2 } from 'src/my_lib';
+  import React, { Component } from 'react';
+
