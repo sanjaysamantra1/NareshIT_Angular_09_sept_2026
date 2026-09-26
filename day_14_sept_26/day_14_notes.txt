@@ -1,0 +1,99 @@
+ES_6 & Beyond
+=============
+13. Optional Chaining (safer deep property access)
+14. Nullish Coalescing (use fallback only for undefined/null)
+15. Map & Set , WeakMap & WeakSet
+16. Promise , async-await
+17. Generators
+18. Proxy & Reflect
+
+
+Falsy Values : undefined, null, NaN, 0 , false , ''
+Truthy Values : 5, 5.2, "sachin" , true, [] , {}
+
+
+Set
+====
+-A Set is a Javascript Object that stores unique values.
+-Set can be iterated using loop,forEach()
+-Set Properties:
+	No Duplicate Values
+	Maintains Insertion Order
+	Can store any data type
+	No indexing
+-When To Use Set:
+	Remove Duplicates easily
+	Fast lookups (O(1))
+
+
+// create a set object
+const planets = new Set();
+
+// add items to set object
+planets.add('Mercury');
+planets.add('Earth');
+planets.add('Venus')
+planets.add('Earth').add('Mars'); // Chainable Method
+
+// To Print the complete set
+console.log(planets); // { 'Mercury', 'Earth', 'Venus', 'Mars' }
+
+// check the size of a set
+console.log('Set Size:', planets.size);  // 4
+
+// check an item exists in a set or not
+console.log(planets.has('Earth')); // true
+
+// Delete an item from a set
+planets.delete('Earth'); // deletes 1 item
+
+// After delete
+console.log(planets); // { 'Mercury', 'Venus', 'Mars' }
+
+// Delete All the items 
+planets.clear();
+
+console.log(planets); // {}
+
+
+Map
+===
+-Map is a collection that stores data in key-value format.
+-Map Properties:
+	Keys can be of any datatype
+	Keys are unique
+	Insertion Order is preserved
+Why Do We need Map:
+	When keys are not strings
+	For Dynamic key-value data
+	Faster 
+
+// create a new Map Object with initial value
+const userMap = new Map([['name', 'sanjay']]); // Entry 
+console.log(userMap);
+
+// Add/Update value
+userMap.set('age', 50); // Add
+userMap.set('address', 'Bangalore'); // Add
+userMap.set('role', 'Admin'); // Add
+userMap.set('role', 'Trainer'); // Update
+
+// Check Map Size
+console.log('Size: ', userMap.size);
+
+// Print the Map
+console.log(userMap);
+
+// Read 1 value
+console.log('Name: ', userMap.get('name')); // Sanjay
+
+// Iterate Map
+for (const [key, value] of userMap) {
+   console.log(`${key} ==== ${value}`);
+}
+
+// Remove an Entry
+userMap.delete('age');
+
+// Remove all entries
+userMap.clear();
