@@ -3,9 +3,7 @@ ES_6 & Beyond
 13. Optional Chaining (safer deep property access)
 14. Nullish Coalescing (use fallback only for undefined/null)
 15. Map & Set , WeakMap & WeakSet
-16. Promise , async-await
-17. Generators
-18. Proxy & Reflect
+
 
 
 Falsy Values : undefined, null, NaN, 0 , false , ''

@@ -1,0 +1,21 @@
+<script>
+    function add(a, b) {
+        return new Promise((resolve, reject) => {
+            if (!Number.isInteger(a) || !Number.isInteger(b)) {
+                reject('a & b should be integers');
+            } else {
+                setTimeout(() => {
+                    resolve(a + b);
+                }, 1000);
+            }
+        })
+    }
+    let addPromise = add(10, 20);
+    console.log(addPromise)
+
+    addPromise.then(result => {
+        console.log('Addition result: ', result)
+    }).catch(error => {
+        console.log(error)
+    })
+</script>

@@ -1,0 +1,62 @@
+16. Promise , async-await
+17. Generators
+
+
+
+synchronous : sequential line by line execution
+asynchronous : 1 code block should not block another code block
+
+
+Promise
+=======
+-A promise is an object that holds the future value of an asynchronous operation.
+-A Promise object represents a value that is not available now, but will be resolved/available at some point in the future.
+-Promise object can have different states:- pending, resolved/fulfilled, rejected.
+ex:-if we request some data from a server, promise promises us to get that data that we can use in the future. 
+
+
+ex: 
+// fetch() returns a promise Object
+let usersPromise= fetch('https://jsonplaceholder.typicode.com/users');
+console.log(usersPromise);
+
+
+Consuming Promise
+-----------------
+1. then()
+2. async-await
+
+
+
+Creating a promise
+------------------
+const myPromise = new Promise((resolve,reject)=>{
+	
+})
+
+
+
+methods of Promise class:
+------------------------
+Promise.all(promises) – waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, it becomes the error of Promise.all, and all other results are ignored.
+Promise.allSettled(promises) – when all of the given promises have either fulfilled or rejected
+	status: "fulfilled" or "rejected"
+	value (if fulfilled) or reason (if rejected).
+Promise.race(promises) – waits for the first promise to settle, and its result/error becomes the outcome.
+Promise.any(promises) – waits for the first promise to fulfill, and its result becomes the outcome. 
+				If all of the given promises are rejected, AggregateError becomes the error of Promise.any.
+Promise.resolve(value) – makes a resolved promise with the given value.
+Promise.reject(error) – makes a rejected promise with the given error.
+Promise.withResolvers - returns an object with 3 properties {promise,resolve,reject}
+
+
+
+
+Async & Await
+-------------
+-async makes a function return a Promise,await makes a function wait for a Promise.
+-Async functions enable the programmer to write promise-based code, Syntax and structure of code  appears like synchronous code but doesn’t block the main thread of execution.
+-async and await makes the program very clean and understandable.there is no need of .then()
+-we can declare the Async functions in JavaScript by specifying the “async” keyword in front of the function definition.
+-For handling the async functions, we use the “await” keyword while invoking to 
+ function to wait for the promise to resolve.

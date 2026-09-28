@@ -1,0 +1,11 @@
+let max_value = Math.max(10, 20, 30, 40, 50); // max() returns a value
+console.log('max_value: ', max_value);
+
+let userPromise = fetch('https://jsonplaceholder.typicode.com/users'); // fetch() returns a promise
+console.log(userPromise);
+
+// To Read/get data from promise, we use 1. then() ,  2. async-await
+
+userPromise.then(response=>{
+    console.log(response)
+})

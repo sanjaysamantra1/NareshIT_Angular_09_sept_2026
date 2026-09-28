@@ -1,0 +1,10 @@
+<script>
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => {
+            response.json().then(userArr => {
+                console.log(userArr)
+            })
+        }).catch(error => {
+            console.log('Something Went Wrong', error)
+        })
+</script>

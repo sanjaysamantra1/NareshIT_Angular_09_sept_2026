@@ -1,0 +1,12 @@
+<script>
+    async function fetch_users() {
+        try {
+            let response = await fetch('https://jsonplaceholder.typicode.com/users')
+            let userArr = await response.json();
+            console.log(userArr)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    fetch_users()
+</script>
