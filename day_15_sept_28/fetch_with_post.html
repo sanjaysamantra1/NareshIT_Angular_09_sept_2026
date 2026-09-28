@@ -1,0 +1,14 @@
+<script>
+    // HTTP Methods: GET , POST, PUT, PATCH , DELETE 
+    const new_user = { "name": "test", "job": "Software Engineer" }
+    async function create_employee() {
+        let response = await fetch('https://reqres.in/api/users', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(new_user)
+        })
+        let finalResponse = await response.json();
+        console.log(finalResponse)
+    }
+    create_employee()
+</script>

@@ -1,0 +1,22 @@
+<script>
+    async function fetch_users() {
+        let response = await fetch('https://jsonplaceholder.typicode.com/users')
+        let finalResponse = await response.json();
+        console.log(finalResponse)
+    }
+    fetch_users()
+
+    async function fetch_todos() {
+        let response = await fetch('https://jsonplaceholder.typicode.com/todos')
+        let finalResponse = await response.json();
+        console.log(finalResponse)
+    }
+    fetch_todos()
+
+    async function fetch_comments() {
+        let response = await fetch('https://jsonplaceholder.typicode.com/comments')
+        let finalResponse = await response.json();
+        console.log(finalResponse)
+    }
+    fetch_comments()
+</script>

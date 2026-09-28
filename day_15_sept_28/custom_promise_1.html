@@ -1,4 +1,15 @@
 <script>
+    function mul(a, b) {
+        let result;
+        setTimeout(() => {
+            result = a * b;
+        }, 1000)
+        return result;
+    }
+    let mulResult = mul(10, 20);
+    console.log('mulResult: ', mulResult); // undefined
+
+
     function add(a, b) {
         return new Promise((resolve, reject) => {
             if (!Number.isInteger(a) || !Number.isInteger(b)) {

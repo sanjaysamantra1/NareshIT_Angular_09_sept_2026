@@ -1,0 +1,13 @@
+<script>
+    let promise1 = fetch('https://jsonplaceholder.typicode.com/users')
+    let promise2 = fetch('https://jsonplaceholder.typicode.com/todos')
+    let promise3 = fetch('https://jsonplaceholder.typicode.com/comments')
+
+    // Make parallel API calls
+    async function fetch_data() {
+        let [response1, response2, response3] = await Promise.all([promise1, promise2, promise3]);
+        let [userData, todoData, commentData] = await Promise.all([response1.json(), response2.json(), response3.json()]);
+        console.log(userData, todoData, commentData);
+    }
+    fetch_data()
+</script>
