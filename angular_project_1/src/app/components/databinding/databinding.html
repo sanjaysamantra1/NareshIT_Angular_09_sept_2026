@@ -1,0 +1,57 @@
+<h3 class="text-center">Let's Learn DataBinding</h3>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>I am attending: {{courseName}} </div>
+  <div>I am attending: <span [innerHTML]="courseName"></span></div>
+
+  <img src="{{img_url}}" alt="angular image" width="300" height="200">
+  <img [src]="img_url" alt="angular image" width="300" height="200">
+  <img bind-src="img_url" alt="angular image" width="300" height="200">
+  <div class="m-2"></div>
+
+  1 way: <input value={{courseName}} />
+  1 way: <input [value]=courseName class="mx-2" />
+  1 way: <input bind-value=courseName class="mx-2" />
+  2 way: <input [(ngModel)]=courseName class="mx-2" />
+  <div class="m-2"></div>
+
+  <button class="btn btn-primary mx-2" disabled="{{flag}}">Click Me</button>
+  <button class="btn btn-primary mx-2" [disabled]="flag">Click Me</button>
+  <button class="btn btn-primary mx-2" bind-disabled="flag">Click Me</button>
+
+  <button class="btn btn-primary mx-2" (click)="toggleFlag()">Toggle Flag</button>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h4>Attribute Binding::</h4>
+  <input [(ngModel)]=max_chars class="mx-2" />
+
+  <input type="text" id="courseName1" value="{{courseName}}" [maxLength]="max_chars">
+  <input type="text" id="courseName2" value="{{courseName}}" [attr.maxlength]="max_chars">
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h4>Variables in templates::</h4>
+  @let first_name = user.firstName;
+  @let greeting = 'Hello, ' + first_name;
+
+  <div>first_name: {{first_name}}</div>
+  <div>greeting: {{greeting}}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h4>Add 2 numbers using 2-way Binding::</h4>
+
+  <input type="number" [(ngModel)]="num1" />
+  <input type="number" [(ngModel)]="num2" class="mx-2" />
+  <div>Addition of {{num1}} & {{num2}} is {{num1+num2}}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h4>Add 2 numbers using Template reference Variable::</h4>
+
+  <input type="number" #inputBox1 />
+  <input type="number" #inputBox2 class="mx-2" />
+  <button (click)="addition(inputBox1.value , inputBox2.value)">Add</button>
+  <div>Addition Result:: {{addResult}}</div>
+</div>
