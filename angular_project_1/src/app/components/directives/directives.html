@@ -1,0 +1,66 @@
+<h3 class="text-center">Let's Learn Directives</h3>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>if-else before angular 17</div>
+  <input type="number" [(ngModel)]="num" />
+  <div *ngIf="num%2==0">{{num}} is Even</div>
+  <div *ngIf="num%2!=0">{{num}} is Odd</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>if-else after angular 17</div>
+  <input type="number" [(ngModel)]="num" />
+  @if(num%2==0){
+    <div>{{num}} is Even</div>
+  }@else{
+    <div>{{num}} is Odd</div>
+  }
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Switch case::</div>
+  @switch (num) {
+    @case (1) { <h1>Monday</h1> }
+    @case (2) { <h1>Tuesday</h1> }
+    @case (3) { <h1>Wednesday</h1> }
+    @case (4) { <h1>Thursday</h1> }
+    @case (5) { <h1>Friday</h1> }
+    @case (6) { <h1>Saturday</h1> }
+    @case (7) { <h1>Sunday</h1> }
+    @default { <h1>Not a Valid number</h1> }
+  }
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Car List using for Directive::</div>
+  <ul>
+    @for (car of carArr; track $index) {
+      <li>{{car}}</li>
+    }
+  </ul>
+
+  <select>
+    @for (car of carArr; track $index) {
+      <option>{{car}}</option>
+    }
+  </select>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Employee Table Using for Directive::</div>
+
+  <table class="table table-bordered">
+    <tbody>
+      @for (emp of employeeArr; track $index) {
+        <tr>
+          <td>{{emp.id}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.role}}</td>
+          <td>{{emp.salary}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.status}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

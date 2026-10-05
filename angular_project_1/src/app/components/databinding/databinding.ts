@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule],
   selector: 'app-databinding',
   styleUrl: './databinding.css',
+  // styles: ['h3 { color: red; }'],
   templateUrl: './databinding.html',
 })
 export class Databinding {
