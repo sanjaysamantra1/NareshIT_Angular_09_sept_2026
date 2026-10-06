@@ -25,4 +25,11 @@ export class Directives {
       { id: 106, name: 'Neha Gupta', role: 'Tester', salary: 72000, status: 'Active', gender: 'female' }
     )
   }
+
+  myStyle1 = { "color": "green", "backgroundColor": "red", "border": "3px dotted yellow" }
+  myStyle2 = { "color": "red", "backgroundColor": "yellow", "border": "3px dotted blue" }
+
+  myFunction(){
+    return this.num%2 ==0 ? this.myStyle1 : this.myStyle2
+  }
 }
