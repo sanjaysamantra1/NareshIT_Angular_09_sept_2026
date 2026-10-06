@@ -18,6 +18,13 @@
 </div>
 
 <div class="border border-2 rounded-2 p-2 m-2">
+  <div>show/hide something using [hidden]</div>
+  <input type="number" [(ngModel)]="num" />
+  <div [hidden]="num%2!==0">{{num}} is Even</div>
+  <div [hidden]="num%2==0">{{num}} is Odd</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
   <div>Switch case::</div>
   @switch (num) {
     @case (1) { <h1>Monday</h1> }
@@ -50,17 +57,43 @@
   <div>Employee Table Using for Directive::</div>
 
   <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sl #</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Salary</th>
+        <th>Gender</th>
+        <th>Status</th>
+        <th>is First?</th>
+        <th>is Last?</th>
+        <th>is Even?</th>
+        <th>is Odd?</th>
+      </tr>
+    </thead>
     <tbody>
       @for (emp of employeeArr; track $index) {
         <tr>
-          <td>{{emp.id}}</td>
-          <td>{{emp.name}}</td>
-          <td>{{emp.role}}</td>
-          <td>{{emp.salary}}</td>
-          <td>{{emp.gender}}</td>
-          <td>{{emp.status}}</td>
+          <td>{{$index+1}}</td>
+          <td>{{emp?.id}}</td>
+          <td>{{emp?.name}}</td>
+          <td>{{emp?.role}}</td>
+          <td>{{emp?.salary}}</td>
+          <td>{{emp?.gender}}</td>
+          <td>{{emp?.status}}</td>
+          <td>{{$first}}</td>
+          <td>{{$last}}</td>
+          <td>{{$even}}</td>
+          <td>{{$odd}}</td>
+        </tr>
+      }@empty {
+        <tr>
+          No Records To display
         </tr>
       }
     </tbody>
   </table>
+
+  <button class="btn btn-primary" (click)="updateEmployeeArr()">Update employees</button>
 </div>
