@@ -17,7 +17,10 @@
     "@angular/forms": "^22.2.0",
     "@angular/platform-browser": "^22.2.0",
     "@angular/router": "^22.2.0",
+    "@fortawesome/angular-fontawesome": "^5.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.3.0",
     "bootstrap": "^5.3.8",
+    "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

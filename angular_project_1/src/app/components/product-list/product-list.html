@@ -1,0 +1,44 @@
+<h3 class="text-center">Product List</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+      <select [value]="selectedCategory" (change)="onCategoryChange($any($event.target).value)" class="form-control">
+        @for (category of categories; track $index) {
+          <option>{{category}}</option>
+        }
+      </select>
+    </div>
+    <div class="col-sm-7">
+      <input type="search" placeholder="Search..." class="form-control"
+      [value]="searchText" (input)="onSearchPerformed($any($event.target).value)">
+    </div>
+    <div class="col-sm-3">
+      <button class="btn btn-primary" (click)="sortAsc()">Sort Asc</button>
+      <button class="btn btn-secondary mx-1" (click)="sortDesc()">Sort Desc</button>
+    </div>
+  </div>
+  <div class="row my-2">
+    @for (product of filteredProducts | paginate: { itemsPerPage: 4, currentPage: p}; track $index) {
+      <div class="card col-sm-3 my-1">
+        <img src="{{product.image}}" class="card-img-top" alt="..." height="250">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{product.category}}</h5>
+          <p class="card-text text-truncate">{{product.title}}</p>
+          <p class="card-text text-truncate">{{product.description}}</p>
+          <p class="card-text">{{product.price}}</p>
+          <p class="card-text">
+            {{product.rating.rate}}
+            <fa-icon [icon]="faStar"></fa-icon>
+            <!-- <fa-icon [icon]="faHeart"></fa-icon> -->
+          </p>
+          <a href="#" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    }
+  </div>
+  <div class="row">
+    <div class="col-sm-5 offset-4">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>
