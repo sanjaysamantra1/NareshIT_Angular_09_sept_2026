@@ -19,9 +19,11 @@
     "@angular/router": "^22.2.0",
     "@fortawesome/angular-fontawesome": "^5.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.3.0",
+    "awesome-snackbar": "^2.0.7",
     "bootstrap": "^5.3.8",
     "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.26.25",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
