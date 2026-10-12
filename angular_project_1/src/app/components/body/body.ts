@@ -4,6 +4,7 @@ import { Databinding } from '../databinding/databinding';
 import { Directives } from '../directives/directives';
 import { MyModal } from '../my-modal/my-modal';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
+import { ParentDemo } from '../parent-demo/parent-demo';
 
 @Component({
   imports: [
@@ -11,7 +12,8 @@ import { PipesDemo } from '../pipes-demo/pipes-demo';
     // Directives,
     // ProductList,
     // MyModal
-    PipesDemo
+    // PipesDemo
+    ParentDemo
   ],
   selector: 'app-body',
   styleUrl: './body.css',

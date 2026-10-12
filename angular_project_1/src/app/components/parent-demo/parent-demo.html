@@ -1,0 +1,16 @@
+<div class="container p-2">
+  <div class="row text-center border border-2 p-2">
+    <div>This is Parent Demo</div>
+    <div>my own data a: {{a}}</div>
+    <div>my child's data b: {{child1.b}}</div>
+    <div>my child's courseName:{{parentCourseName}}</div>
+  </div>
+  <div class="row text-center ">
+    <div class="col-sm-6 border border-2 p-2">
+      <app-child1-demo [a]="a" #child1 (courseEvent)="receiveCourseData($event)"></app-child1-demo>
+    </div>
+    <div class="col-sm-6 border border-2 p-2">
+      <app-child2-demo></app-child2-demo>
+    </div>
+  </div>
+</div>
