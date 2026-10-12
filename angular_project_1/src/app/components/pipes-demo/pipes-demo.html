@@ -6,6 +6,9 @@
   <div>customerName: {{customerName | uppercase}}</div>
   <div>customerName: {{customerName | lowercase}}</div>
   <div>customerName: {{customerName | titlecase}}</div>
+  <div>
+    <input [(ngModel)]="customerName" />
+  </div>
 </div>
 
 <div class="border border-3 rounded-3 p-3 m-2">
@@ -88,4 +91,15 @@
   <h4>Custom Pipe(ordinal):</h4>
   <input type="number" [(ngModel)]="num" />
   <div>number:{{num}}, ordinal value: {{num | ordinal}} </div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-2">
+  <h4>Need of Impure Pipe:</h4>
+  @for (num of numArr | mySort; track $index) {
+    <b>{{num}} &nbsp;</b>
+  }
+  <div>
+    <input type="number" #newNum >
+    <button class="btn btn-primary mx-1" (click)="numArr.push(+newNum.value)">Add New</button>
+  </div>
 </div>
