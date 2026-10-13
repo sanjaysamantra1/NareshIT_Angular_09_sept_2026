@@ -1,5 +1,9 @@
 <p>child1-demo works!</p>
 <div>my parent's data a: {{a}}</div>
-<div>my own data b: {{b}}</div>
+<div>my parent's product data {{product.name}}==={{product.price}}==={{product.quantity}}</div>
+<div>
+  my own data b: {{b}}
+  <input type="number" [(ngModel)]="b" #myInputBox>
+</div>
 <div>courseName: {{courseName}}</div>
 <button class="btn btn-primary" (click)="sendDataToParent()">Send data</button>
