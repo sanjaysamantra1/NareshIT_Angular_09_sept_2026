@@ -1,0 +1,22 @@
+<h3 class="text-center">Employee List</h3>
+
+<select (change)="filterEmployees($any($event.target).value)">
+  <option>All</option>
+  <option>Male</option>
+  <option>Female</option>
+</select>
+
+<table class="table table-bordered mt-2">
+  <tbody>
+    @for (emp of employeeArr; track $index) {
+      <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.role}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.status}}</td>
+      </tr>
+    }
+  </tbody>
+</table>
