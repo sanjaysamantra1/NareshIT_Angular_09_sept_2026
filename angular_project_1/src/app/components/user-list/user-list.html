@@ -1,0 +1,16 @@
+<h3 class="text-center">User List</h3>
+
+<table class="table table-bordered table-striped">
+  <tbody>
+    @for (user of userData | async; track $index) {
+    <tr>
+      <td>{{user.id}}</td>
+      <td>{{user.userName}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.address.city}}</td>
+    </tr>
+    }
+  </tbody>
+</table>

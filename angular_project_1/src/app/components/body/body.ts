@@ -9,6 +9,7 @@ import { Login } from '../login/login';
 import { Logout } from '../logout/logout';
 import { Math } from '../math/math';
 import { EmployeeList } from '../employee-list/employee-list';
+import { UserList } from '../user-list/user-list';
 
 @Component({
   imports: [
@@ -21,7 +22,8 @@ import { EmployeeList } from '../employee-list/employee-list';
     // Login,
     // Logout
     // Math
-    EmployeeList
+    // EmployeeList
+    UserList
   ],
   selector: 'app-body',
   styleUrl: './body.css',
