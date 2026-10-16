@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { UserService } from '../../services/user-service';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
+import { User } from '../../models/user';
 
 @Component({
   imports: [CommonModule],
@@ -11,7 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class UserList {
   userService = inject(UserService);
-  userData: Observable<any> | undefined;
+  userData: Observable<User[]> | undefined;
 
   ngOnInit() {
     // getAllUsers() returns Observable
