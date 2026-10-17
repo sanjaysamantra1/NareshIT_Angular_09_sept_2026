@@ -11,6 +11,8 @@ import { Math } from '../math/math';
 import { EmployeeList } from '../employee-list/employee-list';
 import { UserList } from '../user-list/user-list';
 import { EmpList } from '../emp-list/emp-list';
+import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
+import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 
 @Component({
   imports: [
@@ -24,8 +26,10 @@ import { EmpList } from '../emp-list/emp-list';
     // Logout
     // Math
     // EmployeeList
-    UserList
+    // UserList
     // EmpList
+    // ObservableDemo1
+    ObservableDemo2
   ],
   selector: 'app-body',
   styleUrl: './body.css',

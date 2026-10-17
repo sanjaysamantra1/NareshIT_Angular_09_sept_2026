@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(withInterceptors([
       loggerInterceptor,
-      authInterceptor,
+      // authInterceptor,
       // retryInterceptor
       errorInterceptor
     ]))
