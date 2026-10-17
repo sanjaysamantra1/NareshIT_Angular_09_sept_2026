@@ -24,8 +24,8 @@ import { EmpList } from '../emp-list/emp-list';
     // Logout
     // Math
     // EmployeeList
-    // UserList
-    EmpList
+    UserList
+    // EmpList
   ],
   selector: 'app-body',
   styleUrl: './body.css',
