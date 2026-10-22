@@ -1,0 +1,23 @@
+<h3 class="text-center">Let's Learn Signal</h3>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h4>Cookie Recipe</h4>
+  <label>
+    # of cookies:
+    <input type="range" min="10" max="100" step="10" [value]="cookieCount()" (input)="updateCookieCount($event)" />
+    {{ cookieCount() }}
+  </label>
+  <p>Butter: {{ butter() }} cup(s)</p>
+  <p>Sugar: {{ sugar() }} cup(s)</p>
+  <p>Flour: {{ flour() }} cup(s)</p>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h4>Fruits List With Search</h4>
+  <input [value]="searchTerm()" (input)="searchTerm.set($event.target.value)">
+  <ul>
+    @for (fruit of filteredFruits(); track $index) {
+      <li>{{fruit}}</li>
+    }
+  </ul>
+</div>

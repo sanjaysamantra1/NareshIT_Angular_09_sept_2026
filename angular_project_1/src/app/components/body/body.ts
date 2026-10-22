@@ -15,6 +15,9 @@ import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
 import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
+import { TodoList } from '../todo-list/todo-list';
+import { TodoAdd } from '../todo-add/todo-add';
+import { SignalDemo1 } from '../signal-demo1/signal-demo1';
 
 @Component({
   imports: [
@@ -33,7 +36,10 @@ import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
     // ObservableDemo1
     // ObservableDemo2
     // ObservableDemo3
-    SubjectDemo1
+    // SubjectDemo1
+    // TodoList,
+    // TodoAdd,
+    SignalDemo1
   ],
   selector: 'app-body',
   styleUrl: './body.css',
