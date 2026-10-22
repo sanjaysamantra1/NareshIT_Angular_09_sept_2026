@@ -14,6 +14,7 @@ import { EmpList } from '../emp-list/emp-list';
 import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
+import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
 
 @Component({
   imports: [
@@ -31,7 +32,8 @@ import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
     // EmpList
     // ObservableDemo1
     // ObservableDemo2
-    ObservableDemo3
+    // ObservableDemo3
+    SubjectDemo1
   ],
   selector: 'app-body',
   styleUrl: './body.css',

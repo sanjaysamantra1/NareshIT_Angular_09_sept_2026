@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { of, mergeMap, concatMap, Observable, switchMap, map } from 'rxjs';
+import { of, mergeMap, concatMap, Observable, switchMap, map, exhaustMap, fromEvent } from 'rxjs';
 
 @Component({
   imports: [
@@ -14,6 +14,7 @@ import { of, mergeMap, concatMap, Observable, switchMap, map } from 'rxjs';
 })
 export class ObservableDemo3 {
   httpClient = inject(HttpClient);
+  @ViewChild('loginBtn') loginBtn!: ElementRef;
 
   searchResult$: Observable<any> | undefined;
   searchForm: any;
@@ -51,5 +52,14 @@ export class ObservableDemo3 {
     })).subscribe(cartResponse => {
       console.log(cartResponse)
     });
+  }
+
+  ngAfterViewInit() {
+    fromEvent(this.loginBtn.nativeElement, 'click').pipe(exhaustMap((val) => {
+      return this.httpClient.get('https://httpbin.org/delay/5') // Assume this is Login API
+    })).subscribe({
+      next: (res) => console.log('Response:', res),
+      error: (err) => console.error('Error:', err),
+    })
   }
 }
