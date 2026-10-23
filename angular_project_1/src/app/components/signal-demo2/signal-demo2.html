@@ -1,0 +1,28 @@
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h2>Shopping Cart</h2>
+  <p>Price: {{ price() | currency: 'INR' }}</p>
+
+  <button class="btn btn-danger" (click)="quantity.update((q) => q + 1)">-</button>
+  <span class="mx-3">{{ quantity() }}</span>
+  <button class="btn btn-success" (click)="quantity.update((q) => q + 1)">+</button>
+
+  <p>Total Price: {{ totalPrice() | currency: 'INR' }}</p>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h3 class="text-center">Let's Learn Signal & Effects</h3>
+  <div class="col-sm-4 offset-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ userData().id }}</h5>
+        <h5 class="card-title">{{ userData().username }}</h5>
+        <p class="card-text">{{ userData().email }}</p>
+        <p class="card-text">{{ userData().phone }}</p>
+        <p class="card-text">{{ userData().address.city }}</p>
+        <p class="card-text">{{ userData().website }}</p>
+        <button class="btn btn-primary" (click)="userId.update(userId=>userId+1)">Increment</button>
+        <button class="btn btn-danger mx-2" (click)="destroyEffect()">Destroy Effect</button>
+      </div>
+    </div>
+  </div>
+</div>

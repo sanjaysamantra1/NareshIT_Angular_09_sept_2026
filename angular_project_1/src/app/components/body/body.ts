@@ -18,6 +18,7 @@ import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
 import { TodoList } from '../todo-list/todo-list';
 import { TodoAdd } from '../todo-add/todo-add';
 import { SignalDemo1 } from '../signal-demo1/signal-demo1';
+import { SignalDemo2 } from '../signal-demo2/signal-demo2';
 
 @Component({
   imports: [
@@ -39,7 +40,8 @@ import { SignalDemo1 } from '../signal-demo1/signal-demo1';
     // SubjectDemo1
     // TodoList,
     // TodoAdd,
-    SignalDemo1
+    // SignalDemo1
+    SignalDemo2
   ],
   selector: 'app-body',
   styleUrl: './body.css',
