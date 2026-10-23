@@ -1,0 +1,38 @@
+<h3 class="text-center">Template Driven Form</h3>
+
+<div class="col-sm-4 offset-4 border border-3 p-3">
+  <form #signupForm="ngForm" (submit)="submitForm(signupForm.value)">
+    <p>
+      FirstName:
+      <input name="firstName" #firstName="ngModel" ngModel />
+    </p>
+    <p>
+      lastName:
+      <input name="lastName" #lastName="ngModel" ngModel />
+    </p>
+    <p>
+      Email:
+      <input name="email" #email="ngModel" ngModel />
+    </p>
+    <div ngModelGroup="address">
+      <p>
+        City:
+        <input name="city" #city="ngModel" ngModel />
+      </p>
+      <p>
+        State:
+        <input name="state" #state="ngModel" ngModel />
+      </p>
+      <p>
+        pincode:
+        <input name="pincode" #pincode="ngModel" ngModel />
+      </p>
+    </div>
+
+    <input type="reset" value="Reset" class="mx-2" />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <pre>{{ signupForm.value | json }}</pre>
+
+</div>

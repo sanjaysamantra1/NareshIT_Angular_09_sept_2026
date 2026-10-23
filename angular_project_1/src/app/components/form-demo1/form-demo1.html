@@ -1,0 +1,17 @@
+<h3 class="text-center">Let's Learn Form class names</h3>
+
+<form name="myForm">
+  Name:
+  <input name="userName" [(ngModel)]="name" required /><br /><br />
+  Age:
+  <input name="userAge" [(ngModel)]="age" />
+</form>
+
+<style>
+  input.ng-invalid {
+    border: 5px solid red;
+  }
+  input.ng-valid {
+    border: 5px solid green;
+  }
+</style>
