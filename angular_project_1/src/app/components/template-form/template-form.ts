@@ -9,6 +9,18 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './template-form.html',
 })
 export class TemplateForm {
+  user = {
+    firstName:"Virat",
+    lastName:"Kohli",
+    email:"virat@gmail.com",
+    address:{
+      city:"",
+      state:"",
+      pincode:"",
+    }
+
+  }
+
   submitForm(formData: any) {
     console.log(formData);
   }

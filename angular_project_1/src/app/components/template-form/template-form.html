@@ -4,28 +4,34 @@
   <form #signupForm="ngForm" (submit)="submitForm(signupForm.value)">
     <p>
       FirstName:
-      <input name="firstName" #firstName="ngModel" ngModel />
+      <input name="firstName" #firstName="ngModel" [(ngModel)]="user.firstName" required minlength="5" />
+      @if(firstName.hasError('required')){
+        <span class="text-danger">FirstName is Required</span>
+      }
+      @if(firstName.hasError('minlength')){
+        <span class="text-danger">FirstName Should have minimum 5 chars</span>
+      }
     </p>
     <p>
       lastName:
-      <input name="lastName" #lastName="ngModel" ngModel />
+      <input name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName" />
     </p>
     <p>
       Email:
-      <input name="email" #email="ngModel" ngModel />
+      <input name="email" #email="ngModel" [(ngModel)]="user.email" />
     </p>
     <div ngModelGroup="address">
       <p>
         City:
-        <input name="city" #city="ngModel" ngModel />
+        <input name="city" #city="ngModel" [(ngModel)]="user.address.city" />
       </p>
       <p>
         State:
-        <input name="state" #state="ngModel" ngModel />
+        <input name="state" #state="ngModel" [(ngModel)]="user.address.state" />
       </p>
       <p>
         pincode:
-        <input name="pincode" #pincode="ngModel" ngModel />
+        <input name="pincode" #pincode="ngModel" [(ngModel)]="user.address.pincode" />
       </p>
     </div>
 

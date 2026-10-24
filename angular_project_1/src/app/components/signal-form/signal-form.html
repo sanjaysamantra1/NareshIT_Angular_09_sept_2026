@@ -1,0 +1,20 @@
+<h3 class="text-center">Let's Learn Signal Form</h3>
+<div class="border border-3 rounded-3 p-3 mt-3 offset-3 col-sm-5">
+  <form>
+    <p>
+      Email: <input type="email" [formField]="loginForm.email" />
+      @if (loginForm.email().touched() && loginForm.email().invalid()) {
+        <div>
+          @for (error of loginForm.email().errors(); track $index) {
+            <div class="text-danger">{{ error.message }}</div>
+          }
+        </div>
+      }
+    </p>
+    <p>password: <input type="password" [formField]="loginForm.password" /></p>
+    <input type="reset" value="Reset" />
+    <input class="mx-1" type="submit" value="Submit" [disabled]="loginForm().invalid()" />
+  </form>
+  <div>Email: {{ loginForm.email().value() }}</div>
+  <div>Password Length: {{ loginForm.password().value().length }}</div>
+</div>
