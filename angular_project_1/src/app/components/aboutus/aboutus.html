@@ -1,1 +1,14 @@
-<p>aboutus works!</p>
+<h2 class="text-center">This is Aboutus Component</h2>
+<hr />
+
+<p>
+  <a href="/home">Go To Home</a>
+</p>
+<p>
+  <button routerLink="/home" class="mx-2">take me to Home </button>
+  <button (click)="doSomethingAndGoToHome()">Do Something & Go To Home</button>
+</p>
+<p>
+  <button (click)="goToPreviousPage()" class="mx-2">Previous </button>
+  <button (click)="goToNextPage()">Next</button>
+</p>

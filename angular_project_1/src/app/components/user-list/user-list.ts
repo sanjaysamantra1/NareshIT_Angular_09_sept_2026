@@ -3,9 +3,10 @@ import { UserService } from '../../services/user-service';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { User } from '../../models/user';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   selector: 'app-user-list',
   styleUrl: './user-list.css',
   templateUrl: './user-list.html',

@@ -8,6 +8,6 @@ export class UserService {
   httpClient = inject(HttpClient);
 
   getAllUsers(): Observable<User[]> {
-    return this.httpClient.get<User[]>('https://jsonplaceholder.typicode.co/users');
+    return this.httpClient.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
 }

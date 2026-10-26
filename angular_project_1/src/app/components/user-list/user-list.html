@@ -5,11 +5,14 @@
     @for (user of userData | async; track $index) {
     <tr>
       <td>{{user.id}}</td>
-      <td>{{user.userName}}</td>
+      <td>{{user.username}}</td>
       <td>{{user.name}}</td>
       <td>{{user.email}}</td>
       <td>{{user.phone}}</td>
       <td>{{user.address.city}}</td>
+      <td>
+        <button class="btn btn-primary" [routerLink]="['/userdetails',user.id]">Details</button>
+      </td>
     </tr>
     }
   </tbody>
