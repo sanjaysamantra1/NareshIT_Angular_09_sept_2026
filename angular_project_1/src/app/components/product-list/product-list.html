@@ -35,7 +35,8 @@
             <fa-icon [icon]="faStar"></fa-icon>
             <!-- <fa-icon [icon]="faHeart"></fa-icon> -->
           </p>
-          <a href="#" class="btn btn-primary">Buy Now</a>
+          <button class="btn btn-primary mx-1" [routerLink]="['/productdetails']"
+            [queryParams]="{id:product.id,title:product.title,price:product.price}">Details</button>
         </div>
       </div>
     }
