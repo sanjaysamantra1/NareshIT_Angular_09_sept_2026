@@ -10,12 +10,26 @@ import { Userdetails } from './components/userdetails/userdetails';
 import { Productdetails } from './components/productdetails/productdetails';
 import { Uploadvideos } from './components/uploadvideos/uploadvideos';
 import { trainerGuard } from './guards/trainer-guard';
+import { canExitGuard } from './guards/can-exit-guard';
+import { PermanentJobs } from './components/permanent-jobs/permanent-jobs';
+import { ContractJobs } from './components/contract-jobs/contract-jobs';
 
 export const routes: Routes = [
   { path: 'home', component: Home },
   { path: 'aboutus', component: Aboutus },
-  { path: 'careers', component: Careers },
-  { path: 'contactus', component: Contactus },
+  {
+    path: 'careers',
+    component: Careers,
+    children: [
+      { path: 'permanent', component: PermanentJobs },
+      { path: 'contract', component: ContractJobs },
+    ],
+  },
+  {
+    path: 'contactus',
+    component: Contactus,
+    canDeactivate: [canExitGuard],
+  },
   { path: 'users', component: UserList },
   { path: 'userdetails/:id', component: Userdetails },
   { path: 'products', component: ProductList },

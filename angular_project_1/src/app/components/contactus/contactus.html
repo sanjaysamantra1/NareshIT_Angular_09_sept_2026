@@ -1,1 +1,9 @@
 <h2 class="text-center">This is ContactUs Component</h2>
+
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+  <input name="name" [(ngModel)]="user.name" (ngModelChange)="checkChanges()" />
+  <input name="email" [(ngModel)]="user.email" (ngModelChange)="checkChanges()" />
+  <p>hasChanges: {{ hasChanges }}</p>
+
+  <button type="submit">Submit</button>
+</form>
