@@ -15,7 +15,7 @@ export class SubjectDemo1 {
     this.asyncSubject_demo();
   }
   subject_demo() {
-    let planSubject = new Subject(); // observable(subject)
+    const planSubject = new Subject(); // observable(subject)
     planSubject.next('Plan-A');
     planSubject.subscribe((val) => console.log('Subscriber-1: ', val));
     planSubject.next('Plan-B');
@@ -24,7 +24,7 @@ export class SubjectDemo1 {
   }
 
   behaviorSubject_demo() {
-    let planSubject = new BehaviorSubject('Default Plan'); // observable(subject)
+    const planSubject = new BehaviorSubject('Default Plan'); // observable(subject)
     planSubject.next('Plan-A');
     planSubject.subscribe((val) => console.log('Subscriber-1: ', val));
     planSubject.next('Plan-B');
@@ -33,7 +33,7 @@ export class SubjectDemo1 {
   }
 
   replaySubject_demo() {
-    let planSubject = new ReplaySubject(); // observable(subject)
+    const planSubject = new ReplaySubject(); // observable(subject)
     planSubject.next('Plan-A');
     planSubject.subscribe((val) => console.log('Subscriber-1: ', val));
     planSubject.next('Plan-B');
@@ -42,7 +42,7 @@ export class SubjectDemo1 {
   }
 
   asyncSubject_demo() {
-    let planSubject = new AsyncSubject(); // observable(subject)
+    const planSubject = new AsyncSubject(); // observable(subject)
     planSubject.next('Plan-A');
     planSubject.subscribe((val) => console.log('Subscriber-1: ', val));
     planSubject.next('Plan-B');
