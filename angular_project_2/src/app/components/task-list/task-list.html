@@ -1,0 +1,16 @@
+<h3 class="text-center">This is Task CRUD Component using NGRX</h3>
+<div class="border border-3 p-2 text-center col-sm-4 offset-4">
+  <ol>
+    @for (task of taskArr$ | async; track $index) {
+      <li class="my-2">
+        <span [ngStyle]="{ 'text-decoration': task.isCompleted ? 'line-through' : 'none' }">
+          {{ task.text }} &nbsp;
+          {{ task.isCompleted }}
+          &nbsp;</span
+        >
+        <button class="btn btn-danger" (click)="deleteMyTask(task.id)">Delete</button>
+        <button class="btn btn-secondary mx-1" (click)="toggleMyTask(task.id)">Toggle</button>
+      </li>
+    }
+  </ol>
+</div>
