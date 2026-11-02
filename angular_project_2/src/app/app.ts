@@ -3,14 +3,16 @@ import { MathComponent } from './components/math-component/math-component';
 import { MaterialDemo } from './components/material-demo/material-demo';
 import { CounterDemo } from './components/counter-demo/counter-demo';
 import { TaskList } from './components/task-list/task-list';
+import { EmployeeCrud } from './components/employee-crud/employee-crud';
 
 @Component({
   imports: [
     // MathComponent,
     // MaterialDemo
     // CounterDemo
-    TaskList
-  ],
+    // TaskList,
+    EmployeeCrud
+],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
