@@ -10,8 +10,8 @@ import { EmployeeCrud } from './components/employee-crud/employee-crud';
     // MathComponent,
     // MaterialDemo
     // CounterDemo
-    // TaskList,
-    EmployeeCrud
+    TaskList,
+    // EmployeeCrud
 ],
   selector: 'app-root',
   styleUrl: './app.css',
